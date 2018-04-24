@@ -29,14 +29,14 @@ object FilterGenre {
 
   def main(args: Array[String]): Unit = {
 
-    val spark = SparkSession.builder.appName("tester").master("local").getOrCreate()
-    val textFile = spark.read.textFile("/Users/devindennis1/Documents/CS455/MusicPredictionDataSet/msd_tagtraum_cd2c.cls").rdd
-
+    val path = "/Users/devindennis1/Documents/CS455/MusicPredictionDataSet/msd_tagtraum_cd2c.cls"
     val validator = new evalGenreAnnotations
     validator.filter = args(0)
-    println("Filter By Genre: " + validator.filter + "\n")
 
-    val trackIDs = textFile.collect(validator)
+    val spark = SparkSession.builder.appName("tester").master("local").getOrCreate()
+    val trackIDs = spark.read.textFile(path).rdd.collect(validator)
+
+    println("\nFilter By Genre: " + validator.filter + "\n")
     trackIDs.foreach(println)
 
     // create an empty map -- var map = scala.collection.mutable.Map[String, String]()

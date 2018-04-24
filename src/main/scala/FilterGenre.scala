@@ -7,23 +7,23 @@ import org.apache.spark.rdd.RDD
 
 /** Genres: Rock, Rap, Latin, Jazz, Electronic, Pop, Metal, Country, Reggae, RnB, Blues, Folk, Punk, World, New Age **/
 
-  class evalGenreAnnotations extends PartialFunction [String, String] with Serializable{
+class evalGenreAnnotations extends PartialFunction [String, String] with Serializable{
 
-    var filter = ""
+  var filter = ""
 
-    val validate: PartialFunction[Array[String], String] = {
-      case lines if lines.length == 2 && lines(1).equals(this.filter) => lines(0)
-    }
-
-    override def apply(log: String): String = {
-      validate(log.split("\t"))
-    }
-
-    override def isDefinedAt(x: String): Boolean = {
-      validate.isDefinedAt(x.split("\t"))
-    }
-
+  val validate: PartialFunction[Array[String], String] = {
+    case lines if lines.length == 2 && lines(1).equals(this.filter) => lines(0)
   }
+
+  override def apply(log: String): String = {
+    validate(log.split("\t"))
+  }
+
+  override def isDefinedAt(x: String): Boolean = {
+    validate.isDefinedAt(x.split("\t"))
+  }
+
+}
 
 object FilterGenre {
 

@@ -28,7 +28,7 @@ class evalGenreAnnotations extends PartialFunction [String, String] with Seriali
 object FilterGenre {
 
   var genreSet = scala.collection.mutable.HashSet[String]()
-
+  var midiResultSet = scala.collection.mutable.HashSet[String]()
 
   def traverse(dir: File): Unit =
     dir.listFiles foreach {
@@ -43,8 +43,7 @@ object FilterGenre {
   def doNothing(File: File) = {}
 
   def process(File: File) ={
-    // TODO: UPDATE TO WRITE ALL PROCESSED FILES
-    println("process: " + File)
+    if(!midiResultSet.contains(File.toString)) midiResultSet.add(File.toString)
   }
 
   /** sbt shell: run <Genre> **/
@@ -62,6 +61,14 @@ object FilterGenre {
 
     val midis = "/Users/devindennis1/Documents/CS455/MusicPredictionDataSet/lmd_matched"          // TODO: UPDATE FILE PATH
     traverse(new File(midis))
+
+    val file = new File("/Users/devindennis1/Documents/CS455/MusicPredictionDataSet/jazzMidis.txt")  // TODO: UPDATE FILE PATH
+    val bw = new BufferedWriter(new FileWriter(file))
+    for(midi <- midiResultSet){
+      val line:String = midi.concat("\n")
+      bw.write(line)
+    }
+    bw.close
 
   }
 

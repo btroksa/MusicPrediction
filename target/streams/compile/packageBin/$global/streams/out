@@ -2,6 +2,8 @@
 [0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	FilterGenre$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /Users/devindennis1/Documents/CS455/MusicPrediction/target/scala-2.11/classes/FilterGenre$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	FilterGenre$$anonfun$main$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/devindennis1/Documents/CS455/MusicPrediction/target/scala-2.11/classes/FilterGenre$$anonfun$main$2.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	FilterGenre$$anonfun$traverse$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /Users/devindennis1/Documents/CS455/MusicPrediction/target/scala-2.11/classes/FilterGenre$$anonfun$traverse$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	evalGenreAnnotations.class[0m

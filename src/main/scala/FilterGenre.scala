@@ -49,7 +49,7 @@ object FilterGenre {
   /** sbt shell: run <Genre> **/
   def main(args: Array[String]): Unit = {
 
-    val path = "/Users/devindennis1/Documents/CS455/MusicPredictionDataSet/msd_tagtraum_cd2c.cls" // TODO: UPDATE FILE PATH
+    val path = "/Users/BlakeTroksa/Desktop/msd_tagtraum_cd2c.cls" // TODO: UPDATE FILE PATH
     val validator = new evalGenreAnnotations
     validator.filter = args(0)
 
@@ -59,10 +59,10 @@ object FilterGenre {
     val trackIDs = spark.read.textFile(path).rdd.collect(validator)
     trackIDs.foreach(genreSet.add(_))
 
-    val midis = "/Users/devindennis1/Documents/CS455/MusicPredictionDataSet/lmd_matched"          // TODO: UPDATE FILE PATH
+    val midis = "/Users/BlakeTroksa/Desktop/lmd_matched"          // TODO: UPDATE FILE PATH
     traverse(new File(midis))
 
-    val file = new File("/Users/devindennis1/Documents/CS455/MusicPredictionDataSet/jazzMidis.txt")  // TODO: UPDATE FILE PATH
+    val file = new File("/Users/BlakeTroksa/Desktop/popMidis.txt")  // TODO: UPDATE FILE PATH
     val bw = new BufferedWriter(new FileWriter(file))
     for(midi <- midiResultSet){
       val line:String = midi.concat("\n")

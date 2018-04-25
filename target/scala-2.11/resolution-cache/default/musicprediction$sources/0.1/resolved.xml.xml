@@ -4,7 +4,7 @@
 		module="musicprediction$sources"
 		revision="0.1"
 		status="integration"
-		publication="20180420175108"
+		publication="20180425102015"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>

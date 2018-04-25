@@ -1,17 +1,17 @@
-[0m[[0m[0minfo[0m] [0m[0mPackaging /Users/devindennis1/Documents/CS455/MusicPrediction/target/scala-2.11/musicprediction_2.11-0.1.jar ...[0m
+[0m[[0m[0minfo[0m] [0m[0mPackaging /Users/BlakeTroksa/Documents/School/Senior_College/cs455/MusicPrediction/target/scala-2.11/musicprediction_2.11-0.1.jar ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	FilterGenre$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/devindennis1/Documents/CS455/MusicPrediction/target/scala-2.11/classes/FilterGenre$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	FilterGenre$$anonfun$main$2.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/devindennis1/Documents/CS455/MusicPrediction/target/scala-2.11/classes/FilterGenre$$anonfun$main$2.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	FilterGenre$$anonfun$traverse$1.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/devindennis1/Documents/CS455/MusicPrediction/target/scala-2.11/classes/FilterGenre$$anonfun$traverse$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	evalGenreAnnotations.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/devindennis1/Documents/CS455/MusicPrediction/target/scala-2.11/classes/evalGenreAnnotations.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/BlakeTroksa/Documents/School/Senior_College/cs455/MusicPrediction/target/scala-2.11/classes/evalGenreAnnotations.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	evalGenreAnnotations$$anonfun$1.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/devindennis1/Documents/CS455/MusicPrediction/target/scala-2.11/classes/evalGenreAnnotations$$anonfun$1.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	FilterGenre.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/devindennis1/Documents/CS455/MusicPrediction/target/scala-2.11/classes/FilterGenre.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/BlakeTroksa/Documents/School/Senior_College/cs455/MusicPrediction/target/scala-2.11/classes/evalGenreAnnotations$$anonfun$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	FilterGenre$$anonfun$traverse$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/BlakeTroksa/Documents/School/Senior_College/cs455/MusicPrediction/target/scala-2.11/classes/FilterGenre$$anonfun$traverse$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	FilterGenre$$anonfun$main$1.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/devindennis1/Documents/CS455/MusicPrediction/target/scala-2.11/classes/FilterGenre$$anonfun$main$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/BlakeTroksa/Documents/School/Senior_College/cs455/MusicPrediction/target/scala-2.11/classes/FilterGenre$$anonfun$main$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	FilterGenre.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/BlakeTroksa/Documents/School/Senior_College/cs455/MusicPrediction/target/scala-2.11/classes/FilterGenre.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	FilterGenre$$anonfun$main$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/BlakeTroksa/Documents/School/Senior_College/cs455/MusicPrediction/target/scala-2.11/classes/FilterGenre$$anonfun$main$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	FilterGenre$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/BlakeTroksa/Documents/School/Senior_College/cs455/MusicPrediction/target/scala-2.11/classes/FilterGenre$.class[0m
 [0m[[0m[0minfo[0m] [0m[0mDone packaging.[0m

@@ -2,7 +2,8 @@
 from pyspark import SparkContext, SparkConf
 import argparse
 
-
+def printer(x):
+    print(x)
 
 def Begin(f):
     # Read in Midi organize data
@@ -57,7 +58,7 @@ if __name__ == "__main__":
     file = args["file"]
 
     all_files = sc.textFile(file)
-
+    all_files.foreach(printer)
     all_files.foreach(Begin)
 
 

@@ -7,7 +7,9 @@ def Begin(f):
     # Read in Midi organize data
     try:
         import Preprocess
-        file = "file://~/"+str(f)
+        import socket
+        host = (socket.gethostname())
+        file = "file:///s/bach/c/under/btroksa/"+str(f)
         print(file)
         Instruments = Preprocess.getInstruments(file)
         dictOfNotes = Preprocess.getNotes(Instruments)

@@ -31,14 +31,14 @@ object FilterGenre {
   var midiResultSet = scala.collection.mutable.HashSet[String]()
 
   def traverse(dir: File): Unit =
-    dir.listFiles.foreach({
-            f =>  val item = f.toString.substring(f.toString.lastIndexOf("/") + 1, f.toString.length)
-                  if (f.isDirectory && item.length == 18 && this.genreSet.contains(item)) traverse(f)
-                  else if (f.isDirectory && item.length == 18) doNothing(f)
-                  else if(item.equals(".DS_Store")) doNothing(f)
-                  else if (f.isDirectory && item.length() == 1) traverse(f)
-                  else process(f)
-        })
+    dir.listFiles foreach {
+        f =>  val item = f.toString.substring(f.toString.lastIndexOf("/") + 1, f.toString.length)
+              if (f.isDirectory && item.length == 18 && this.genreSet.contains(item)) traverse(f)
+              else if (f.isDirectory && item.length == 18) doNothing(f)
+              else if(item.equals(".DS_Store")) doNothing(f)
+              else if (f.isDirectory && item.length() == 1) traverse(f)
+              else process(f)
+    }
 
   def doNothing(File: File) = {}
 
@@ -55,14 +55,12 @@ object FilterGenre {
 
     println("\nFilter By Genre: " + validator.filter + "\n")
 
-    val spark = SparkSession.builder.appName("tester").master("spark://albany:48630").getOrCreate()
+    val spark = SparkSession.builder.appName("tester").master("local").getOrCreate()
     val trackIDs = spark.read.textFile(path).rdd.collect(validator)
     trackIDs.foreach(genreSet.add(_))
 
     val midis = args(2)          // TODO: UPDATE FILE PATH
-    if(midis != null) {
-      traverse(new File(midis))
-    }
+    traverse(new File(midis))
 
     val file = new File(args(3))  // TODO: UPDATE FILE PATH
     val bw = new BufferedWriter(new FileWriter(file))

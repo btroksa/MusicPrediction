@@ -7,7 +7,7 @@ def Begin(f):
     # Read in Midi organize data
     try:
         import Preprocess
-        file = str(f)
+        file = "hdfs://albany:48600/"+str(f)
         print(file)
         Instruments = Preprocess.getInstruments(file)
         dictOfNotes = Preprocess.getNotes(Instruments)

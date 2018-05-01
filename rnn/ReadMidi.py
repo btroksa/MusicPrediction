@@ -1,9 +1,6 @@
 
 
 def LoadText(dictInstrumentNotes, index):
-    import sys
-    sys.path.insert(0, "/s/bach/c/under/btroksa/.local/lib/python3.6/site-packages/")
-    import music21
     import numpy as np
     # open text and return input and output data (series of words)
     data = dictInstrumentNotes[index]
@@ -44,7 +41,6 @@ def WriteInstruments(Instrum, file):
     import sys
     sys.path.insert(0, "/s/bach/c/under/btroksa/.local/lib/python3.6/site-packages/")
     import music21
-    import numpy as np
     outputMidi = music21.stream.Score()
     for i in Instrum:
         tempStream = music21.stream.Part()

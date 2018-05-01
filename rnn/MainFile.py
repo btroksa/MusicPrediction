@@ -40,8 +40,8 @@ def Begin(f):
             output = RNN.sample()
             # write it all to disk
             ReadMidi.ExportMidi(output, data, Instruments, index, file)
-    except:
-        pass
+    except Exception as e:
+        print(e)
 
 
 if __name__ == "__main__":

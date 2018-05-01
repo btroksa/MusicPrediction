@@ -49,7 +49,7 @@ def WriteInstruments(Instrum, file):
         outputMidi.append(tempStream)
         try:
             mf = music21.midi.translate.streamToMidiFile(outputMidi)
-            mf.open(file[:-4] + "_new.mid", 'wb')
+            mf.open("file://"+file[:-4] + "_new.mid", 'wb')
             mf.write()
             mf.close()
         except:

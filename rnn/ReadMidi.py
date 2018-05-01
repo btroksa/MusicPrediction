@@ -1,7 +1,10 @@
-from music21 import *
-import numpy as np
+
 
 def LoadText(dictInstrumentNotes, index):
+    import sys
+    sys.path.insert(0, "/s/bach/c/under/btroksa/.local/lib/python3.6/site-packages/")
+    import music21
+    import numpy as np
     # open text and return input and output data (series of words)
     data = dictInstrumentNotes[index]
     text = data
@@ -21,29 +24,39 @@ def LoadText(dictInstrumentNotes, index):
 
 # write the predicted output (series of words) to disk
 def ExportMidi(output, data, Instruments, index, file):
-    finalOutput = np.zeros_like(output)
+    import sys
+    sys.path.insert(0, "/s/bach/c/under/btroksa/.local/lib/python3.6/site-packages/")
+    import music21
+    import numpy as np
     prob = np.zeros_like(output[0])
     for i in range(0, output.shape[0]):
         for j in range(0, output.shape[1]):
             prob[j] = output[i][j] / np.sum(output[i])
         outputNote = np.random.choice(data, p=prob)
         if (len(outputNote) > 4):
-            Instruments[index].getElementsByClass(stream.Part)[0].append(chord.Chord(outputNote))
+            Instruments[index].getElementsByClass(music21.stream.Part)[0].append(music21.chord.Chord(outputNote))
         else:
-            Instruments[index].getElementsByClass(stream.Part)[0].append(note.Note(outputNote))
+            Instruments[index].getElementsByClass(music21.stream.Part)[0].append(music21.note.Note(outputNote))
     WriteInstruments(Instruments, file)
 
 
 def WriteInstruments(Instrum, file):
-    outputMidi = stream.Score()
+    import sys
+    sys.path.insert(0, "/s/bach/c/under/btroksa/.local/lib/python3.6/site-packages/")
+    import music21
+    import numpy as np
+    outputMidi = music21.stream.Score()
     for i in Instrum:
-        tempStream = stream.Part()
-        for j in i.getElementsByClass(stream.Part):
+        tempStream = music21.stream.Part()
+        for j in i.getElementsByClass(music21.stream.Part):
             tempStream.append(j)
         outputMidi.append(tempStream)
-    mf = midi.translate.streamToMidiFile(outputMidi)
-    mf.open(file[:-4] + "_new.mid", 'wb')
-    mf.write()
-    mf.close()
+        try:
+            mf = music21.midi.translate.streamToMidiFile(outputMidi)
+            mf.open(file[:-4] + "_new.mid", 'wb')
+            mf.write()
+            mf.close()
+        except:
+            pass
     return
 

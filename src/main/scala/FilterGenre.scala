@@ -55,7 +55,7 @@ object FilterGenre {
 
     println("\nFilter By Genre: " + validator.filter + "\n")
 
-    val spark = SparkSession.builder.appName("tester").master("local").getOrCreate()
+    val spark = SparkSession.builder.appName("tester").master("spark://albany:48630").getOrCreate()
     val trackIDs = spark.read.textFile(path).rdd.collect(validator)
     trackIDs.foreach(genreSet.add(_))
 

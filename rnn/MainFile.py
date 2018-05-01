@@ -1,14 +1,13 @@
-#COMEOEMFOME
 
-
+import Preprocess
+from RecurrentNN import *
+import ReadMidi
 from pyspark import SparkContext, SparkConf
 import argparse
 
 
 
 def Begin(f):
-    from RecurrentNN import *
-    import Preprocess
     # Read in Midi organize data
     try:
         file = "hdfs://albany:48600/"+str(f)
@@ -16,7 +15,6 @@ def Begin(f):
         dictOfNotes = Preprocess.getNotes(Instruments)
 
         for index in range(len(Instruments)):
-            import ReadMidi
             iterations = 1000
             learningRate = 0.001
             # load input output data

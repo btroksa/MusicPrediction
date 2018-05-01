@@ -24,6 +24,7 @@ def Begin(f):
 
             # training time!
             for i in range(1, iterations):
+                print(file)
                 # compute predicted next note
                 RNN.forwardProp()
                 # update all our weights using our error
@@ -46,9 +47,8 @@ def Begin(f):
 
 if __name__ == "__main__":
     conf = (SparkConf()
-            .setMaster("local")
             .setAppName("My app")
-            .set("spark.executor.memory", "1g"))
+            .set("spark.executor.memory", "3g"))
     sc = SparkContext(conf=conf).getOrCreate()
 
     parser = argparse.ArgumentParser("\nParse input Arguments for LSTM Music Prediction")

@@ -1,20 +1,22 @@
+#COMEOEMFOME
 
-import Preprocess
-from RecurrentNN import *
-import ReadMidi
+
 from pyspark import SparkContext, SparkConf
 import argparse
 
 
 
-def Begin(file):
+def Begin(f):
+    from RecurrentNN import *
+    import Preprocess
     # Read in Midi organize data
     try:
-        print(file)
+        file = "hdfs://albany:48600/"+str(f)
         Instruments = Preprocess.getInstruments(file)
         dictOfNotes = Preprocess.getNotes(Instruments)
 
         for index in range(len(Instruments)):
+            import ReadMidi
             iterations = 1000
             learningRate = 0.001
             # load input output data
@@ -54,6 +56,7 @@ if __name__ == "__main__":
     parser.add_argument("-f", "--file", help="Add file path for Midi files\n", type=str)
     args = vars(parser.parse_args())
     file = args["file"]
+
     all_files = sc.textFile(file)
 
     all_files.foreach(Begin)

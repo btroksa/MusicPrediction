@@ -16,7 +16,7 @@ def Begin(f):
             import ReadMidi
             import RecurrentNN as rnn
             import numpy as np
-            iterations = 1000
+            iterations = 10
             learningRate = 0.001
             # load input output data
             returnData, numCategories, expectedOutput, outputSize, data = ReadMidi.LoadText(dictOfNotes, index)

@@ -2,14 +2,13 @@
 from pyspark import SparkContext, SparkConf
 import argparse
 
-def printer(x):
-    print(x)
 
 def Begin(f):
     # Read in Midi organize data
     try:
         import Preprocess
         file = "hdfs://albany:48600/"+str(f)
+        print(file)
         Instruments = Preprocess.getInstruments(file)
         dictOfNotes = Preprocess.getNotes(Instruments)
 
@@ -58,7 +57,6 @@ if __name__ == "__main__":
     file = args["file"]
 
     all_files = sc.textFile(file)
-    all_files.foreach(printer)
     all_files.foreach(Begin)
 
 

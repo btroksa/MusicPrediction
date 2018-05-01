@@ -52,7 +52,7 @@ def WriteInstruments(Instrum, file):
             mf.open("file://"+file[:-4] + "_new.mid", 'wb')
             mf.write()
             mf.close()
-        except:
-            pass
+        except Exception as e:
+            print(e)
     return
 

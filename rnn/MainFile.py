@@ -24,7 +24,6 @@ def Begin(f):
 
             # training time!
             for i in range(1, iterations):
-                print(file)
                 # compute predicted next note
                 RNN.forwardProp()
                 # update all our weights using our error
@@ -37,9 +36,9 @@ def Begin(f):
                     maxI = np.argmax(np.random.random(RNN.x.shape))
                     seed[maxI] = 1
                     RNN.x = seed
-                    # and predict some new text!
+
             output = RNN.sample()
-            # write it all to disk
+            # write it all
             ReadMidi.ExportMidi(output, data, Instruments, index, file)
     except Exception as e:
         print(e)
@@ -56,7 +55,7 @@ if __name__ == "__main__":
     args = vars(parser.parse_args())
     file = args["file"]
 
-    all_files = sc.textFile(file)
+    all_files = sc.textFile(file).repartition(10)
     all_files.foreach(Begin)
 
 

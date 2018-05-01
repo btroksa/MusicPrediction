@@ -55,7 +55,7 @@ if __name__ == "__main__":
     args = vars(parser.parse_args())
     file = args["file"]
 
-    all_files = sc.textFile(file).rdd.repartition(10)
+    all_files = sc.textFile(file).repartition(10)
     all_files.foreach(Begin)
 
 

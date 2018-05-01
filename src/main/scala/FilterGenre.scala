@@ -60,7 +60,9 @@ object FilterGenre {
     trackIDs.foreach(genreSet.add(_))
 
     val midis = args(2)          // TODO: UPDATE FILE PATH
-    traverse(new File(midis))
+    if(midis != null) {
+      traverse(new File(midis))
+    }
 
     val file = new File(args(3))  // TODO: UPDATE FILE PATH
     val bw = new BufferedWriter(new FileWriter(file))

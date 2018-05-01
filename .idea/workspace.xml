@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5d13d48e-9268-41c6-94d4-771d882e0d54" name="Default" comment="" />
+    <list default="true" id="5d13d48e-9268-41c6-94d4-771d882e0d54" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/scala/FilterGenre.scala" afterPath="$PROJECT_DIR$/src/main/scala/FilterGenre.scala" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
     <ignored path="$PROJECT_DIR$/project/target/" />
@@ -32,8 +34,8 @@
       <file leaf-file-name="FilterGenre.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/FilterGenre.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="33" column="24" lean-forward="false" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+            <state relative-caret-position="288">
+              <caret line="62" column="13" lean-forward="false" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
               </folding>
@@ -273,12 +275,12 @@
       <workItem from="1524611072820" duration="10240000" />
       <workItem from="1524668264848" duration="1699000" />
       <workItem from="1524673150806" duration="7242000" />
-      <workItem from="1525156257333" duration="1440000" />
+      <workItem from="1525156257333" duration="1498000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39108000" />
+    <option name="totallyTimeSpent" value="39166000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -495,8 +497,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/FilterGenre.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="33" column="24" lean-forward="false" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+        <state relative-caret-position="288">
+          <caret line="62" column="13" lean-forward="false" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>

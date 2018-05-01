@@ -1,6 +1,5 @@
 
 import Preprocess
-from RecurrentNN import *
 from pyspark import SparkContext, SparkConf
 import argparse
 
@@ -15,11 +14,13 @@ def Begin(f):
 
         for index in range(len(Instruments)):
             import ReadMidi
+            import RecurrentNN as rnn
+            import numpy as np
             iterations = 1000
             learningRate = 0.001
             # load input output data
             returnData, numCategories, expectedOutput, outputSize, data = ReadMidi.LoadText(dictOfNotes, index)
-            RNN = RecurrentNeuralNetwork(numCategories, numCategories, outputSize, expectedOutput, learningRate)
+            RNN = rnn.RecurrentNeuralNetwork(numCategories, numCategories, outputSize, expectedOutput, learningRate)
 
             # training time!
             for i in range(1, iterations):

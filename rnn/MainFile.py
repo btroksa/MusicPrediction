@@ -57,6 +57,6 @@ if __name__ == "__main__":
     file = args["file"]
 
     all_files = sc.textFile(file)
-    all_files.foreach(Begin)
+    all_files.forEachAsync(Begin)
 
 

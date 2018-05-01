@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5d13d48e-9268-41c6-94d4-771d882e0d54" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/scala/FilterGenre.scala" afterPath="$PROJECT_DIR$/src/main/scala/FilterGenre.scala" />
-    </list>
+    <list default="true" id="5d13d48e-9268-41c6-94d4-771d882e0d54" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
     <ignored path="$PROJECT_DIR$/project/target/" />
@@ -275,12 +273,12 @@
       <workItem from="1524611072820" duration="10240000" />
       <workItem from="1524668264848" duration="1699000" />
       <workItem from="1524673150806" duration="7242000" />
-      <workItem from="1525156257333" duration="2330000" />
+      <workItem from="1525156257333" duration="2919000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39998000" />
+    <option name="totallyTimeSpent" value="40587000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">

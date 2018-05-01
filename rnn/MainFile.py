@@ -1,5 +1,4 @@
 
-import Preprocess
 from pyspark import SparkContext, SparkConf
 import argparse
 
@@ -8,6 +7,7 @@ import argparse
 def Begin(f):
     # Read in Midi organize data
     try:
+        import Preprocess
         file = "hdfs://albany:48600/"+str(f)
         Instruments = Preprocess.getInstruments(file)
         dictOfNotes = Preprocess.getNotes(Instruments)

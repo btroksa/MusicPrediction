@@ -31,7 +31,7 @@ object FilterGenre {
   var midiResultSet = scala.collection.mutable.HashSet[String]()
 
   def traverse(dir: File): Unit =
-    dir.listFiles foreach {
+    dir.listFiles forgiteach {
         f =>  val item = f.toString.substring(f.toString.lastIndexOf("/") + 1, f.toString.length)
               if (f.isDirectory && item.length == 18 && this.genreSet.contains(item)) traverse(f)
               else if (f.isDirectory && item.length == 18) doNothing(f)
